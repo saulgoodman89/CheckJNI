@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CheckJNI</string>
+    <string name="notice_num">숫자를 입력하세요</string>
 </resources>
