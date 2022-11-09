@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     if(factorialNum<=0)
                         return;
                     calculateFactorial(factorialNum);
+                    Log.e("KEG","Check JNI : " +JniManager.checkFactorialFunctionTime(factorialNum));
                 }catch (Exception e) {
                     e.printStackTrace();
                 }

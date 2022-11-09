@@ -25,6 +25,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    /*
+    sourceSets.main{
+        jniLibs.srcDir 'src/main/jni'   // .so파일 위치 지정
+    }
+
+    packagingOptions {
+        pickFirst '**/*.so'
+    }*/
 }
 
 dependencies {

@@ -5,5 +5,5 @@ public class JniManager {
     static {
         System.loadLibrary(FACTORIAL_JNI);
     }
-    public native long checkFactorialFunctionTime(int _inputNum);
+    public static native long checkFactorialFunctionTime(int _inputNum);
 }
