@@ -1,7 +1,7 @@
 package com.keg.checkjni;
 
 public class JniManager {
-    public final static String FACTORIAL_JNI = "factorial_jni";
+    public final static String FACTORIAL_JNI = "factorialjni";
     static {
         System.loadLibrary(FACTORIAL_JNI);
     }
