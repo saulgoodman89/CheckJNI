@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                     if(factorialNum<=0)
                         return;
                     calculateFactorial(factorialNum);
-                    Log.e("KEG","Check JNI : " +JniManager.checkFactorialFunctionTime(factorialNum));
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -46,17 +45,20 @@ public class MainActivity extends AppCompatActivity {
             long sum = 0;
             long difftime = 0;
             long startTime = System.currentTimeMillis();
-            Log.e("KEG","startTime : "+ startTime);
             for(int i=1; i<=_factorialNum; i++) {
                 sum += i;
             }
             long endTime = System.currentTimeMillis();
-            Log.e("KEG","endTime : "+ endTime);
             difftime = endTime-startTime;
-           // difftime = TimeUnit.MILLISECONDS.toSeconds(endTime-startTime);
-           // Log.e("KEG","difftime : "+ difftime);
+
             mResultText.setText(String.valueOf(sum));
             mJavaTimeText.setText(String.valueOf(difftime));
+            Log.e("KEG","java Time : "+ difftime);
+            long cTime = JniManager.checkFactorialFunctionTime(_factorialNum);
+            mCTimeText.setText(String.valueOf(cTime));
+            Log.e("KEG","c Time : "+ cTime);
     }
+
+
 }
 

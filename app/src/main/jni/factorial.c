@@ -1,4 +1,5 @@
 #include<sys/time.h>
+#include "log.h"
 
 long getCurrentTimetoMillisecond();
 struct timeval te;
@@ -8,15 +9,12 @@ long checkFactorialFunctionTime(int _inputNum) {
 	int inputNum = _inputNum;
         
 	long startTime = getCurrentTimetoMillisecond(&te);
-	printf("startTime : %ld \n",startTime);
 	for(int i=1; i<=inputNum; i++) {
 		sum += i;
 	}
-
 	long endTime = getCurrentTimetoMillisecond(&te);
-	printf("endTime : %ld \n",endTime);
-	printf("time : %ld \n", endTime-startTime);
-	printf("sum : %d ",sum);
+	return endTime - startTime;
+
 }
 
 long getCurrentTimetoMillisecond() {
