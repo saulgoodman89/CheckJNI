@@ -4,7 +4,7 @@ include $(CLEAR_VARS)   #CLEAR_VARS : LOCAL_XXX 변수를 자동으로 삭제하
 
 LOCAL_MODULE := factorialjni    #라이브러리 이름
 LOCAL_SRC_FILES := factorialjni.c , factorial.c #빌드할 파일들
-#LOCAL_LDLIBS := -llog 로그 라이브러리 추가
+LOCAL_LDLIBS := -llog
 #LOCAL_PATH:=$(call my-dir)  개발트리에 있는 소스 파일의 위치 /  my-dir : Android mk 파일이 있는 디렉토리 경로
 
 include $(BUILD_SHARED_LIBRARY) #가장 최근의 include 이후의 LOCAL 변수들를 모두 수집하는 GNU Makefile을 가르킨다.

@@ -1,24 +1,24 @@
+#include<stdio.h>
 #include<sys/time.h>
-#include "log.h"
+
 
 long getCurrentTimetoMillisecond();
 struct timeval te;
 
-long checkFactorialFunctionTime(int _inputNum) {	
+int main() {
 	long sum = 0;
-	int inputNum = _inputNum;
+	int inputNum = 500000000;
         
 	long startTime = getCurrentTimetoMillisecond();
-  //  LOGE("KEG C startTime : %ld",startTime);
-  LOGE("KEG C start");
-	for(long i=1; i<=inputNum; i++) {
+  //  LOGE("KEG C startTime : %ld\n ",startTime);
+  printf("KEG C start");
+	for(int i=1; i<=inputNum; i++) {
 		sum += i;
 	}
-    LOGE("KEG C sum : %ld",sum);
+    printf("KEG C sum : %ld \n",sum);
 	long endTime = getCurrentTimetoMillisecond();
-    LOGE("KEG C endTime : %ld",endTime);
-    LOGE("KEG C endTime - startTime  : %ld",endTime-startTime);
-	return endTime - startTime;
+    printf("KEG C endTime : %ld\n",endTime);
+    printf("KEG C endTime - startTime  : %ld \n",endTime-startTime);
 
 }
 
