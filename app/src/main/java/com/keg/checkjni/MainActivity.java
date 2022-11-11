@@ -41,14 +41,39 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+        long 9223372036854775807
+        9,223,372,036,854,775,807
+        2,432,902,008,176,640,000
+
+        2432902008176640000
+
+        51090942171709440000
+
+     */
     private void calculateFactorial(int _factorialNum) {
-            long sum = 0;
+            long sum = 1;
             long difftime = 0;
             long startTime = System.currentTimeMillis();
+            int count = 0;
+            /*
             for(int i=1; i<=_factorialNum; i++) {
                 sum += i;
-            }
-            long endTime = System.currentTimeMillis();
+               // Log.e("KEG","count : "+ i  + " value : "+ sum);
+            }*/
+
+            /*
+            int count=0;
+            for ( int  i = 0 ; i < 100000000 ; i++) {
+                count ++;
+            }*/
+
+        for (int i = 0; i<10000000 ; i++) {
+            count = count*2/3+5-1;
+        }
+
+
+        long endTime = System.currentTimeMillis();
             difftime = endTime-startTime;
 
             mResultText.setText(String.valueOf(sum));
@@ -57,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
             long cTime = JniManager.checkFactorialFunctionTime(_factorialNum);
             mCTimeText.setText(String.valueOf(cTime));
             Log.e("KEG","c Time : "+ cTime);
+
+            //2432902008176640000/
     }
 
 

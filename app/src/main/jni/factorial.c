@@ -5,15 +5,27 @@ long getCurrentTimetoMillisecond();
 struct timeval te;
 
 long checkFactorialFunctionTime(int _inputNum) {	
-	long sum = 0;
+	 long sum = 1;
 	int inputNum = _inputNum;
         
 	long startTime = getCurrentTimetoMillisecond();
   //  LOGE("KEG C startTime : %ld",startTime);
   LOGE("KEG C start");
-	for(long i=1; i<=inputNum; i++) {
+  /*
+	for(int i=1; i<=inputNum; i++) {
 		sum += i;
+		//LOGE("KEG C count : %ld   Value : %ld",i,sum);
+	}*/
+  	int count=0;
+	  /*
+	for ( int  i = 0 ; i < 100000000 ; i++) {
+		count ++;
+	}*/
+	for (int i = 0; i<10000000 ; i++) {
+		count = count*2/3+5-1;
 	}
+
+	long sum1 = 0;
     LOGE("KEG C sum : %ld",sum);
 	long endTime = getCurrentTimetoMillisecond();
     LOGE("KEG C endTime : %ld",endTime);
